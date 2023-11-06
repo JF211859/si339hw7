@@ -1,9 +1,10 @@
-var video;
+var video = document.querySelector('.video');
+
+console.log(video)
 
 window.addEventListener("load", function() {
 	video.autoplay = false;
 	video.loop = false;
-	console.log("Hello")
 });
 
 // document.querySelector("#play").addEventListener("click", function() {
