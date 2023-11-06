@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
 });
 
 document.querySelector("#play").addEventListener("click", function() {
-	video.volume = document.querySelector("#slider").value / 100;
+	video.volume = document.querySelector("#slider").value / 100 + "%";
 	document.querySelector('#volume').innerHTML = document.querySelector("#slider").value;
 	video.play();
 })
@@ -18,12 +18,12 @@ document.querySelector("#pause").addEventListener("click", function() {
 })
 
 document.querySelector("#slower").addEventListener("click", function() {
-	video.defaultPlaybackRate /= 1.1;
+	video.defaultPlaybackRate *= 0.9;
 	console.log(video.defaultPlaybackRate);
 })
 
 document.querySelector("#faster").addEventListener("click", function() {
-	video.defaultPlaybackRate *= 1.1;
+	video.defaultPlaybackRate /= 0.9;
 	console.log(video.defaultPlaybackRate)
 })
 
@@ -50,7 +50,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 document.querySelector("#slider").addEventListener("change", function() {
 	video.volume = document.querySelector("#slider").value / 100;
-	document.querySelector('#volume').innerHTML = document.querySelector("#slider").value;
+	document.querySelector('#volume').innerHTML = document.querySelector("#slider").value + "%";
 	console.log(video.volume);
 })
 
