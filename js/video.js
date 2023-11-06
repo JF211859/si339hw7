@@ -8,8 +8,8 @@ window.addEventListener("load", function() {
 });
 
 document.querySelector("#play").addEventListener("click", function() {
-	video.volume = document.querySelector("#slider").value / 100 + "%";
-	document.querySelector('#volume').innerHTML = document.querySelector("#slider").value;
+	video.volume = document.querySelector("#slider").value / 100;
+	document.querySelector('#volume').innerHTML = document.querySelector("#slider").value  + "%";
 	video.play();
 })
 
